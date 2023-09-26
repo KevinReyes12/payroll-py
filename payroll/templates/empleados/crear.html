@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %} Crear empleado {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        Crear un empleado
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del empleado</h4>
+        {% include 'empleados/form.html' %}
+    </div>
+    <div class="card-footer text-muted text-end">
+        
+    </div>
+</div>
+
+{% endblock %}

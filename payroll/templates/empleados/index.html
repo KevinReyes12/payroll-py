@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block titulo %} Lista de Empleados {% endblock %}
+
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn text-light" style="background-color: rgb(113, 140, 216);" href="{% url 'crear' %}" role="button">+ Agregar nuevo empleado</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Empleados</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">C.I.</th>
+                        <th scope="col">Apellidos y Nombres</th>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Sueldo</th>
+                        <th scope="col">Comisiones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for empleado in empleados %}
+                    <tr>
+                        <td scope="row">{{ empleado.ci }}</td>
+                        <td>{{ empleado.name }}</td>
+                        <td>{{ empleado.position }}</td>
+                        <td>{{ empleado.pay }}</td>
+                        <td>{{ empleado.comissions }}</td>
+                        <td>
+                            <a name="" id="" class="btn text-light" style="background-color: rgb(113, 140, 216);" href="{% url 'editar' empleado.id %}" role="button">Editar</a>
+                            |
+                            <a name="" id="" class="btn text-light" style="background-color: rgb(187, 23, 23);" href="{% url 'eliminar' empleado.id %}" role="button">Borrar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">
+         
+    </div>
+</div>
+
+{% endblock %}

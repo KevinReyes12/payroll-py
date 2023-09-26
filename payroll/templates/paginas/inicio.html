@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %} 
+
+<div class="p-5 mb-4 rounded-3">
+    <div class="container-fluid py-5">
+      <center>
+        <h1 class="display-5 fw-bold"> Bienvenido al rol de empleados</h1>
+        <p class="col-md-8 fs-4">Administre el registro de sus empleados</p>
+      </center>
+  
+      <div class="text-center">
+        <br/>
+        <a href="{% url 'empleados' %}">
+            <button class="btn btn-lg text-light" style="background-color: rgb(113, 140, 216);" type="button">Empezar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
