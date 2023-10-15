@@ -5,9 +5,12 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+  <h3>Bienvenido {{ user.username }}!</h3>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <div class="container-fluid" style="background-color: blueviolet;">
+    <p> ¡No estás logeado!</p>
+    <a href="{% url 'login' %}">Log In</a>
+  </div>
+  
 {% endif %}
 {% endblock %}
