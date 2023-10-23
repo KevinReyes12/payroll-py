@@ -1,8 +1,9 @@
+<!-- payroll/templates/base.html -->
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>{% block titulo %}  {% endblock %}</title>
+  <title>{% block titulo %}Inicio{% endblock %}</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,8 +21,9 @@
           <div class="nav navbar-nav">
             <a class="nav-item nav-link active text-light" href="{% url 'inicio' %}">Inicio</a>
             <a class="nav-item nav-link active text-light" href="{% url 'empleados' %}">Empleados</a>
-            <!-- <a class="nav-item nav-link active text-light" href="{% url 'nosotros' %}">Nosotros</a> -->
+            
           </div>
+          <div><a href="{% url 'logout' %}" class="btn text-white">Cerrar Sesión</a></div>
     </nav>
     
   </header>

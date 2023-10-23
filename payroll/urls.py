@@ -3,10 +3,13 @@ from . import views
 
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
+from django.views.generic.base import TemplateView
+
 
 urlpatterns = [
-    path('inicio',views.inicio , name = 'inicio'),
-    path('nosotros', views.nosotros, name= 'nosotros'),
+    # path('', views.login, name='login'),
+    # path('login', TemplateView.as_view(template_name='home.html'),name='home'),
+    path('',views.inicio , name = 'inicio'),
     path('empleados', views.empleados, name='empleados'),
     path('empleados/crear', views.crear_empleado, name='crear'),
     path('empleados/editar', views.editar_empleado, name='editar'),

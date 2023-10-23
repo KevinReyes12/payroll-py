@@ -4,6 +4,9 @@ from .forms import EmpleadoForm
 #from django.http import HttpResponse
 # Create your views here.
 
+def login(request):
+    return render(request, 'registration/login.html')
+
 def inicio(request):
     return render(request, 'paginas/inicio.html')
 
