@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Empleado(models.Model):
-    ci = models.IntegerField(unique=True, verbose_name= "C.I.")
+    ci = models.IntegerField(max_length=10, unique=True, verbose_name= "C.I.")
     name = models.CharField(max_length=75, verbose_name="Apellidos y Nombres")
     position = models.CharField(max_length=50, verbose_name="Cargo")
     pay = models.IntegerField(verbose_name="Sueldo")
